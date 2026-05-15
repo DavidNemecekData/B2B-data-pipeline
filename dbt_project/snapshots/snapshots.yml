@@ -1,5 +1,0 @@
-version: 2
-
-snapshots:
-  - name: snp_catalog_item
-    description: "SCD Type 2 snapshot tracking historical changes in catalog item prices and categories to preserve reporting accuracy."
