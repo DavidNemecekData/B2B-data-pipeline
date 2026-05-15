@@ -1,0 +1,75 @@
+"item_id","item_category","type_name","list_price","width_mm","height_mm","ratio","has_bleed","is_bonus"
+1,ADVERTISEMENT,"1",133000.00,230,297,1.00000,true,false
+2,ADVERTISEMENT,"2/3",119000.00,149,297,0.66700,true,false
+3,ADVERTISEMENT,"1/2 (A5)",98000.00,249,210,0.50000,false,false
+4,ADVERTISEMENT,"1/2 width",80500.00,200,120,0.50000,false,false
+5,ADVERTISEMENT,"1/2 height",80500.00,112,297,0.50000,true,false
+6,ADVERTISEMENT,"1/3 width",73500.00,200,81,0.33300,false,false
+7,ADVERTISEMENT,"1/3 height",73500.00,72,297,0.33300,true,false
+8,ADVERTISEMENT,"1/4 width",45500.00,149,94,0.25000,false,false
+9,ADVERTISEMENT,"1/4 height",45500.00,98,120,0.25000,false,false
+10,ADVERTISEMENT,"1/8",24500.00,98,63,0.12500,false,false
+11,ADVERTISEMENT,Glued in,94500.00,,,,false,false
+12,ADVERTISEMENT,Cover wrap,175000.00,,,,false,false
+13,ADVERTISEMENT,Fold out cover,210000.00,,,,false,false
+14,ADVERTISEMENT,Front cover flap,192500.00,,,,false,false
+15,ADVERTISEMENT,Title page,77000.00,230,297,1.00000,true,false
+16,ADVERTISEMENT,Print insert,87500.00,,,,false,false
+17,ADVERTISEMENT,Digital insert,35000.00,,,,false,false
+18,ADVERTISEMENT,Other,0.00,,,,false,false
+19,ADVERTISEMENT,"1",0.00,230,297,1.00000,true,true
+20,ADVERTISEMENT,"2/3",0.00,149,297,0.66700,true,true
+21,ADVERTISEMENT,"1/2 (A5)",0.00,249,210,0.50000,false,true
+22,ADVERTISEMENT,"1/2 width",0.00,200,120,0.50000,false,true
+23,ADVERTISEMENT,"1/2 height",0.00,112,297,0.50000,true,true
+24,ADVERTISEMENT,"1/3 width",0.00,200,81,0.33300,false,true
+25,ADVERTISEMENT,"1/3 height",0.00,72,297,0.33300,true,true
+26,ADVERTISEMENT,"1/4 width",0.00,149,94,0.25000,false,true
+27,ADVERTISEMENT,"1/4 height",0.00,98,120,0.25000,false,true
+28,ADVERTISEMENT,"1/8",0.00,98,63,0.12500,false,true
+29,ADVERTISEMENT,Glued in,0.00,,,,false,true
+30,ADVERTISEMENT,Cover wrap,0.00,,,,false,true
+31,ADVERTISEMENT,Fold out cover,0.00,,,,false,true
+32,ADVERTISEMENT,Front cover flap,0.00,,,,false,true
+33,ADVERTISEMENT,Title page,0.00,230,297,1.00000,true,true
+34,ADVERTISEMENT,Print insert,0.00,,,,false,true
+35,ADVERTISEMENT,Digital insert,0.00,,,,false,true
+36,ADVERTISEMENT,Other,0.00,,,,false,true
+37,PR_ARTICLE,"3",199500.00,,,3.00000,false,false
+38,PR_ARTICLE,"2 and 1/2",173250.00,,,2.50000,false,false
+39,PR_ARTICLE,"2",133000.00,,,2.00000,false,false
+40,PR_ARTICLE,"1 and 3/4",129500.00,,,1.75000,false,false
+41,PR_ARTICLE,"1 and 2/3",129500.00,,,1.66700,false,false
+42,PR_ARTICLE,"1 and 1/2",106750.00,,,1.50000,false,false
+43,PR_ARTICLE,"1 and 1/4",89250.00,,,1.25000,false,false
+44,PR_ARTICLE,"1",66500.00,,,1.00000,false,false
+45,PR_ARTICLE,"2/3",63000.00,,,0.66700,false,false
+46,PR_ARTICLE,"3/4",63000.00,,,0.75000,false,false
+47,PR_ARTICLE,"1/2",40250.00,,,0.50000,false,false
+48,PR_ARTICLE,"1/4",22750.00,,,0.25000,false,false
+49,PR_ARTICLE,Other,0.00,,,0.00000,false,false
+50,PR_ARTICLE,"3",0.00,,,3.00000,false,true
+51,PR_ARTICLE,"2 and 1/2",0.00,,,2.50000,false,true
+52,PR_ARTICLE,"2",0.00,,,2.00000,false,true
+53,PR_ARTICLE,"1 and 3/4",0.00,,,1.75000,false,true
+54,PR_ARTICLE,"1 and 2/3",0.00,,,1.66700,false,true
+55,PR_ARTICLE,"1 and 1/2",0.00,,,1.50000,false,true
+56,PR_ARTICLE,"1 and 1/4",0.00,,,1.25000,false,true
+57,PR_ARTICLE,"1",0.00,,,1.00000,false,true
+58,PR_ARTICLE,"2/3",0.00,,,0.66700,false,true
+59,PR_ARTICLE,"3/4",0.00,,,0.75000,false,true
+60,PR_ARTICLE,"1/2",0.00,,,0.50000,false,true
+61,PR_ARTICLE,"1/4",0.00,,,0.25000,false,true
+62,PR_ARTICLE,Other,0.00,,,0.00000,false,true
+63,ED_ARTICLE,"3",0.00,,,3.00000,false,true
+64,ED_ARTICLE,"2 and 1/2",0.00,,,2.50000,false,true
+65,ED_ARTICLE,"2",0.00,,,2.00000,false,true
+66,ED_ARTICLE,"1 and 3/4",0.00,,,1.75000,false,true
+67,ED_ARTICLE,"1 and 2/3",0.00,,,1.66700,false,true
+68,ED_ARTICLE,"1 and 1/2",0.00,,,1.50000,false,true
+69,ED_ARTICLE,"1 and 1/4",0.00,,,1.25000,false,true
+70,ED_ARTICLE,"1",0.00,,,1.00000,false,true
+71,ED_ARTICLE,"2/3",0.00,,,0.66700,false,true
+72,ED_ARTICLE,"3/4",0.00,,,0.75000,false,true
+73,ED_ARTICLE,"1/2",0.00,,,0.50000,false,true
+75,ADVERTISEMENT,"2",0.00,230,297,2.00000,true,true

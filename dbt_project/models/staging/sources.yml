@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: raw_presentation
+    schema: public
+    description: "The raw data is from our transactional database (PostgreSQL)."
+    tables:
+      # Independent (numeric and dimensional) tables
+      - name: company
+        description: "Raw company records."
+      - name: catalog_item
+        description: "Raw product catalog containing base list prices and categories."
+      - name: ed_author
+        description: "List of internal editorial authors and journalists."
+      - name: category_field
+        description: "Raw category field data used for segmentation."
+      # Connect and Fact Tables
+      - name: contact_history
+        description: "Raw, unaggregated log of all communication attempts between sales reps and companies."
+        columns:
+          - name: contact_status
+            description: "The raw status of the call (e.g., ACCEPTED, REJECTED)."
+        loaded_at_field: contact_date::timestamp
+        freshness:
+          warn_after: {count: 20, period: day}
+          error_after: {count: 30, period: day}
+      - name: issue_content
+        description: "Raw transactional data representing the actual sales of advertisement space."
+      - name: company_specialization
+        description: "Raw data linking companies to their specialization categories."
+      - name: issue
+        description: "Raw data representing the issues of the magazine, including publication dates."
+      - name: issue_section
+        description: "Raw data representing the sections of the magazine."
+      - name: issue_specialization
+        description: "Raw data linking issues to their specialization categories."
+      - name: specialization 
+        description: "Raw data representing the specialization categories."

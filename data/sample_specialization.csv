@@ -1,0 +1,79 @@
+"specialization_id","field_id","spec_name"
+1,1,Buildings and reconstructions
+2,1,Roughage feeds
+3,1,Dairy cattle
+4,1,Swine breeding
+5,1,Feed production
+6,1,Poultry breeding
+7,1,Goats and sheep breeding
+8,1,Livestock nutrition
+9,1,Horse breeding
+10,1,Silage
+11,1,Youngstock rearing
+12,1,Pastures
+13,1,Zoohygiene and animal health
+14,1,Smart farming
+15,1,Beef cattle
+16,1,Fish farming
+17,1,Modernization
+18,1,Biological waste
+19,1,Animal products
+20,1,Beekeeping
+21,1,Milk processing
+22,1,Reproduction
+23,2,Permanent grasslands
+24,2,Forage crops and alfalfa
+25,2,Catch crops
+26,2,Storage
+27,2,Winter rapeseed
+28,2,Cereals
+29,2,Nontraditional crops
+30,2,Organic matter
+31,2,Corn
+32,2,Legumes and root crops
+33,2,Potatoes
+34,2,Soil protection
+35,2,Smart farming
+36,2,Spring oilseeds
+37,2,Plant nutrition
+38,2,Plant stimulation
+39,2,Plant protection
+40,2,Barley
+41,2,Wheat
+42,2,Fruit orchard
+43,2,Peas
+44,2,Soybeans
+45,2,Sugar beet
+46,2,Vineyard
+47,2,Forest culture
+48,2,Cannabis
+49,3,Tractors
+50,3,Handling equipment
+51,3,Feeding wagon
+52,3,Unrollers
+53,3,Sprayer
+54,3,Fodder harvest machines
+55,3,Sowing machines
+56,3,Spreaders
+57,3,Combine harvester
+58,3,Alternative energy
+59,3,Soil cultivation
+60,3,Cisterns and application equipment
+61,3,Harvester choppers
+62,3,Transport
+63,3,Straw blowers
+64,3,Smart farming
+65,3,Permanent grasslands technology
+66,3,Mulchers
+67,3,Front loaders
+68,3,Forestry machinery
+69,3,Crawler tractors
+70,3,Transfer trucks
+71,3,Presses balers
+72,3,Special tractors
+73,3,Municipal technology
+74,4,TECHAGRO
+75,4,AGRISHOW
+76,4,VLL
+77,4,Other
+78,4,Země živitelka
