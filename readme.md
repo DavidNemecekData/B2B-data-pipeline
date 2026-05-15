@@ -8,8 +8,8 @@
 
 ## 📌 Quick Links & Live Demos
 Check out the final results directly:
-* 📊 **[Interactive Power BI Dashboard (NovyPro)](VLOZ_ODKAZ_NA_NOVYPRO)**
-* 🌐 **[Interactive dbt Documentation & Lineage Graph](VLOZ_ODKAZ_NA_DBT_DOCS)**
+* 📊 **[Interactive Power BI Dashboard (NovyPro)](https://www.novypro.com/profile_about/1778828204393x931372849144373400?Popup=memberProject&Data=1778844994359x587881176989680500)**
+* 🌐 **[Interactive dbt Documentation & Lineage Graph](https://davidnemecekdata.github.io/B2B-data-pipeline/#!/overview)**
 
 ---
 

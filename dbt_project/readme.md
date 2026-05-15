@@ -5,7 +5,7 @@ This component specifies the dbt (Data Build Tool) layer used for transforming r
 ### 🌐 Interactive dbt Documentation & Lineage Graph
 The complete interactive documentation, including the Directed Acyclic Graph (DAG) of data lineage, table relationships, and column-level definitions, has been compiled using `dbt docs` and is hosted online. 
 
-👉 **[Explore the Interactive dbt Documentation Here](VLOZ_SVUJ_ODKAZ_ZDE)**
+👉 **[Explore the Interactive dbt Documentation Here](https://davidnemecekdata.github.io/B2B-data-pipeline/#!/overview)**
 
 ---
 

@@ -10,7 +10,7 @@ This directory contains visual documentation and diagrams supporting the B2B Dat
 ### 📊 Final Reporting
 * **Power BI Dashboard Preview:** A static snapshot of the final interactive report. 
   * 📁 The complete `.pbix` source file is stored in the [power_bi](../power_bi/) directory.
-  * 🌐 You can explore the fully interactive version of this dashboard online at [NovyPro.com](Tvuj_Odkaz_Na_NovyPro_Zde).
+  * 🌐 You can explore the fully interactive version of this dashboard online at [NovyPro.com](https://www.novypro.com/profile_about/1778828204393x931372849144373400?Popup=memberProject&Data=1778844994359x587881176989680500).
 ![Power BI Dashboard Preview](dashboard_preview.png)
 
 ### 📉 Legacy Data State

@@ -7,7 +7,7 @@ This directory contains the final presentation layer of the B2B Data Pipeline. T
 ### 🌐 Interactive Dashboard
 You can explore the fully interactive version of the dashboard online:
 
-👉 **[View the Interactive Report on NovyPro.com](VLOZ_SVUJ_ODKAZ_ZDE)**
+👉 **[View the Interactive Report on NovyPro.com](https://www.novypro.com/profile_about/1778828204393x931372849144373400?Popup=memberProject&Data=1778844994359x587881176989680500)**
 
 ---
 
