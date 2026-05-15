@@ -61,5 +61,5 @@ A robust transformation layer was built on top of the relational model:
 
 ### 5. Reporting (Power BI)
 The final layer consists of an interactive dashboard connected to the dbt marts, providing a comprehensive overview of financial performance, CRM conversion rates, and discount impacts across individual months and specializations.
-
+* *(Explore the report in the [power_bi](./power_bi/) folder).*
 ---
