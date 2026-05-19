@@ -1,0 +1,237 @@
+Table_Name,Measure_Name,DAX_Formula
+_measures,total_net_sales,SUM(fct_sales_performance[final_net_price])
+_measures,average_discount,"CALCULATE(
+    DIVIDE(
+        SUM('fct_sales_performance'[absolute_discount]),
+        SUM('fct_sales_performance'[applied_list_price]),
+        BLANK()
+    ),
+    'dim_catalog_item'[bonus_status] = ""Paid""
+)"
+_measures,total_page_ratio,SUM(fct_sales_performance[page_ratio])
+_measures,total_net_sales_PY,"CALCULATE(
+        [total_net_sales],
+        SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+    )"
+_measures,average_discount_PY,"CALCULATE(
+        [average_discount],
+        SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+    )"
+_measures,total_page_ratio_PY,"CALCULATE(
+        [total_page_ratio],
+        SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+    )"
+_measures,total_net_sales_YoY_Abs,[total_net_sales] - [total_net_sales_PY]
+_measures,average_discount_YoY,"IF(
+    ISBLANK([average_discount_PY]),
+    BLANK(),
+    [average_discount] - [average_discount_PY]
+)"
+_measures,total_page_ratio_YoY_Abs,[total_page_ratio] - [total_page_ratio_PY]
+_measures,total_net_sales_YoY_Pct,"DIVIDE(
+        [total_net_sales_YoY_Abs],
+        [total_net_sales_PY],
+        BLANK()
+    )"
+_measures,total_page_ratio_YoY_Pct,"DIVIDE(
+        [total_page_ratio_YoY_Abs],
+        [total_page_ratio_PY],
+        BLANK()
+    )"
+_measures,total_net_sales_YoY_Formatted,"VAR YoY_Value = [total_net_sales_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([total_net_sales_PY])
+VAR Threshold = 0.0005 
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist, 
+    Arrow & FORMAT(YoY_Value, ""0.0%;0.0%;0.0%""),
+    BLANK()
+)"
+_measures,total_page_ratio_YoY_Formatted,"VAR YoY_Value = [total_page_ratio_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([total_page_ratio_PY])
+VAR Threshold = 0.0005
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist,
+    Arrow & FORMAT(YoY_Value, ""0.0%;0.0%;0.0%""),
+    BLANK()
+)"
+_measures,average_discount_YoY_Formatted,"VAR YoY_Value = [average_discount_YoY]
+VAR HistoryExist = NOT ISBLANK([average_discount_PY])
+VAR Threshold = 0.0005
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist,
+    Arrow & FORMAT(YoY_Value * 100, ""0.0;0.0;0.0"") & "" pp"",
+    BLANK()
+)"
+_measures,win_rate,"DIVIDE(
+        SUM('fct_crm_funnel'[accepted_contacts]),
+        SUM('fct_crm_funnel'[accepted_contacts]) + SUM(fct_crm_funnel[rejected_contacts]),
+        BLANK()
+    )"
+_measures,win_rate_PY,"CALCULATE(
+        [win_rate],
+        SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+    )"
+_measures,win_rate_YoY,"IF(
+    ISBLANK([win_rate_PY]),
+    BLANK(),
+    [win_rate] - [win_rate_PY]
+)"
+_measures,win_rate_YoY_Formatted,"VAR YoY_Value = [win_rate_YoY]
+VAR HistoryExist = NOT ISBLANK([win_rate_PY])
+VAR Threshold = 0.0005
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist,
+    Arrow & FORMAT(YoY_Value * 100, ""0.0;0.0;0.0"") & "" pp"",
+    BLANK()
+)"
+_measures,total_gross_sales,SUM(fct_sales_performance[applied_list_price])
+_measures,total_gross_sales_PY,"CALCULATE(
+        [total_gross_sales],
+        SAMEPERIODLASTYEAR(dim_calendar[date_day])
+    )"
+_measures,total_gross_sales_YoY_Abs,[total_gross_sales] - [total_gross_sales_PY]
+_measures,total_gross_sales_YoY_Pct,"DIVIDE(
+        [total_gross_sales_YoY_Abs],
+        [total_gross_sales_PY],
+        BLANK()
+    )"
+_measures,total_gross_sales_YoY_Formatted,"VAR YoY_Value = [total_gross_sales_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([total_gross_sales_PY])
+VAR Threshold = 0.0005 
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist, 
+    Arrow & FORMAT(YoY_Value, ""0.0%;0.0%;0.0%""),
+    BLANK()
+)"
+_measures,legend_Inbound,"UNICHAR(9679) & "" Inbound"""
+_measures,legend_Outbound,"UNICHAR(9679) & "" Outbound"""
+_measures,count_items_sold,COUNTROWS(fct_sales_performance)
+_measures,count_special_advertising,"CALCULATE(
+    COUNTROWS('fct_sales_performance'),
+    ISBLANK('fct_sales_performance'[page_ratio])
+)"
+_measures,count_special_advertising_PY,"CALCULATE(
+    [count_special_advertising],
+    SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+)"
+_measures,count_special_advertising_YoY_Abs,[count_special_advertising] - [count_special_advertising_PY]
+_measures,count_special_advertising_YoY_Pct,"DIVIDE(
+    [count_special_advertising_YoY_Abs],
+    [count_special_advertising_PY],
+    BLANK()
+)"
+_measures,count_special_advertising_YoY_Formatted,"VAR YoY_Value = [count_special_advertising_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([count_special_advertising_PY])
+VAR Threshold = 0.0005 
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist, 
+    Arrow & FORMAT(YoY_Value, ""0.0%;0.0%;0.0%""),
+    BLANK()
+)"
+_measures,total_net_sales_YoY_Formatted_tooltip,"VAR YoY_Value = [total_net_sales_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([total_net_sales_PY])
+VAR Threshold = 0.0005 
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist, 
+    Arrow & FORMAT(YoY_Value, ""0%;0%;0%""),
+    BLANK()
+)"
+_measures,tooltipe_title_specialization,SELECTEDVALUE('dim_specialization'[specialization_name])
+_measures,axis_buffer,"MAXX(ALLSELECTED(dim_calendar[calendar_year]),
+    [total_net_sales]
+) * 1.38"
+_measures,tooltipe_title_company,SELECTEDVALUE('dim_company_enriched'[company_name])
+_measures,tooltip_title_net_sales_month,"SELECTEDVALUE('dim_calendar'[calendar_year]) & "" "" & 
+SELECTEDVALUE('dim_calendar'[month_name_short])"
+_measures,tooltipe_title_matrix,"SELECTEDVALUE('dim_catalog_item'[item_category_name]) & "": "" &
+SELECTEDVALUE('dim_catalog_item'[type_name])"
+_measures,count_item_sold_PY,"CALCULATE(
+    [count_items_sold],
+    SAMEPERIODLASTYEAR('dim_calendar'[date_day])
+)"
+_measures,count_item_sold_YoY_Abs,[count_items_sold] - [count_item_sold_PY]
+_measures,count_item_sold_YoY_Pct,"DIVIDE(
+    [count_item_sold_YoY_Abs],
+    [count_item_sold_PY],
+    BLANK()
+)"
+_measures,count_item_sold_YoY_formatted,"VAR YoY_Value = [count_item_sold_YoY_Pct]
+VAR HistoryExist = NOT ISBLANK([count_item_sold_PY])
+VAR Threshold = 0.0005 
+
+VAR Arrow = 
+    SWITCH( TRUE(),
+        YoY_Value >= Threshold, UNICHAR(9650) & "" "",
+        YoY_Value <= -Threshold, UNICHAR(9660) & "" "",
+        UNICHAR(11834) & "" ""
+    )
+
+RETURN
+IF(
+    HistoryExist, 
+    Arrow & FORMAT(YoY_Value, ""0.0%;0.0%;0.0%""),
+    BLANK()
+)"
