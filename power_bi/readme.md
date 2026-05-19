@@ -9,7 +9,7 @@ You can explore the fully interactive version of the dashboard online:
 
 👉 **[View the Interactive Report](https://mavenshowcase.com/project/56446)**
 
-You can find all the DAX measures used here:
+You can find all the DAX measures used here:   
 👉 **[View the DAX code](measures.csv)**
 
 ---
